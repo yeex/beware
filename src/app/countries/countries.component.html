@@ -1,0 +1,45 @@
+<div class="ui inverted dimmer" [class.active]='loading'>
+    <div class="ui text loader">Please wait</div>
+</div>
+<div class="jumbotron bg-white">
+    <h1>COVID-19 Affected Countries</h1>
+    <hr>
+    <div class="mx-auto">
+        <div class="formgroup col-lg-5 mx-auto">
+            <label for="country">Select Country</label>
+            <select name="" class="form-control" id="country" #input (change)='fetch(input.value)'>
+                <option value="">Please choose</option>
+                <option value="{{country}}" *ngFor="let country of countries"> {{ country }} </option>
+            </select>
+        </div>
+    </div>
+    <dashboard
+        [confirmedCases]='confirmedCases'
+        [recoveredCases]='recoveredCases'
+        [deathsCases]='deathsCases'
+        [activeCases]='activeCases'>
+    </dashboard>
+    <div class="row">
+        <!-- <div class="col">
+            <table class="table"> 
+                <thead>
+                    <tr>
+                        <th>SN</th>
+                        <th>Date</th>
+                        <th>Cases</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let cs of countrySelected; index as i '>
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ cs.date | date }}</td>
+                        <td>{{ cs.cases }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> -->
+        <!-- <div class="col"> -->
+            <google-chart [data]="table" [type]='linechart' style="width: 100%;"></google-chart>
+        <!-- </div> -->
+    </div>
+</div>

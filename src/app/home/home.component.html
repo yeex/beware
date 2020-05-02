@@ -1,0 +1,51 @@
+<div class="ui inverted dimmer" [class.active]='loading'>
+    <div class="ui text loader">Please wait</div>
+</div>
+<div class="jumbotron bg-white">
+    <h1 class="display-4">COVID-19 Beware App</h1>
+    <hr>
+    <dashboard
+        [confirmedCases]='confirmedCases'
+        [recoveredCases]='recoveredCases'
+        [deathsCases]='deathsCases'
+        [activeCases]='activeCases'>
+    </dashboard>
+</div>
+<hr>
+<div class="ui form">
+    <div class="inline fields">
+        <label for="">Select case type: </label>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" id="confirmed" #confirmed (click)='update(confirmed)' value="confirmed" name="typecase" checked="" tabindex="0" class="hidden">
+                <label for="confirmed">Confirmed</label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" id="recovered" #recovered (click)='update(recovered)' value="recovered" name="typecase" checked="" tabindex="0" class="hidden">
+                <label for="recovered">Recovered</label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" id="death" #death (click)='update(death)' value="death" name="typecase" checked="" tabindex="0" class="hidden">
+                <label for="death">Deaths</label>
+            </div>
+        </div>
+        <div class="field">
+            <div class="ui radio checkbox">
+                <input type="radio" id="active" #active (click)='update(active)' value="active" name="typecase" checked="" tabindex="0" class="hidden">
+                <label for="active">Active</label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <google-chart [data]="table" [type]='pie'></google-chart>
+    </div>
+    <div class="col">
+        <google-chart [data]="table" [type]='column'></google-chart>
+    </div>
+</div>
