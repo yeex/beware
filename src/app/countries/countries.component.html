@@ -1,27 +1,29 @@
 <div class="ui inverted dimmer" [class.active]='loading'>
     <div class="ui text loader">Please wait</div>
 </div>
-<div class="jumbotron bg-white">
-    <h1>COVID-19 Affected Countries</h1>
-    <hr>
-    <div class="mx-auto">
-        <div class="formgroup col-lg-5 mx-auto">
-            <label for="country">Select Country</label>
-            <select name="" class="form-control" id="country" #input (change)='fetch(input.value)'>
-                <option value="">Please choose</option>
-                <option value="{{country}}" *ngFor="let country of countries"> {{ country }} </option>
-            </select>
+<app-intro></app-intro>
+<section>
+  <div class="container bg-white mb-5 pb-5">
+    <h1 class="text-center mb-md-5">COVID-19 Affected Countries</h1>
+    <div class="container">
+      <div class="mx-auto">
+        <div class="form-group mx-auto">
+          <select name="" class="form-control" id="country" #input (change)='fetch(input.value)'>
+            <option value="">Choose country</option>
+            <option value="{{country}}" *ngFor="let country of countries"> {{ country }} </option>
+          </select>
         </div>
-    </div>
-    <dashboard
+      </div>
+      <dashboard
         [confirmedCases]='confirmedCases'
         [recoveredCases]='recoveredCases'
         [deathsCases]='deathsCases'
         [activeCases]='activeCases'>
-    </dashboard>
+      </dashboard>
+    </div>
     <div class="row">
         <!-- <div class="col">
-            <table class="table"> 
+            <table class="table">
                 <thead>
                     <tr>
                         <th>SN</th>
@@ -38,8 +40,11 @@
                 </tbody>
             </table>
         </div> -->
-        <!-- <div class="col"> -->
-            <google-chart [data]="table" [type]='linechart' style="width: 100%;"></google-chart>
-        <!-- </div> -->
+        <div class="col-12">
+          <google-chart [data]="table" [type]='linechart' style="width: 100%;"></google-chart>
+        </div>
     </div>
-</div>
+  </div>
+</section>
+<app-subscribe></app-subscribe>
+<app-footer></app-footer>
