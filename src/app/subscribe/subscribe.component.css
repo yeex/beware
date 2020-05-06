@@ -1,0 +1,132 @@
+section {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  padding: 4em 0 9em 0;
+  overflow: hidden;
+}
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 200px;
+  background: #fff;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+.lighten {
+  background-color: #e3f2fd;
+}
+.badge-rounded-circle {
+  border-radius: 50%;
+}
+.badge-lg {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-green {
+  color: #00b39b;
+}
+.badge-green {
+ background: #1de9b6;
+}
+.timeline {
+  position: relative;
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background-color: #50a1ff;
+}
+.timeline-element {
+  position: relative;
+  width: 50%;
+  padding: 1rem 0;
+  padding-right: 2.5rem;
+  text-align: right;
+}
+.timeline-element::before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 1.35rem;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #50a1ff;
+  background-color: #fff;
+}
+.timeline-element:nth-child(even)::before {
+  right: auto;
+  left: -8px;
+  }
+.timeline-element:nth-child(even) {
+  margin-left: 50%;
+  padding-left: 2.5rem;
+  padding-right: 0;
+  text-align: left;
+}
+@media (max-width: 767.98px) {
+  .timeline::before {
+    left: 8px;
+  }
+}
+@media (max-width: 767.98px) {
+  .timeline-element {
+    width: 100%;
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .timeline-element::before {
+    top: 1.25rem;
+    left: 1px;
+  }
+}
+@media (max-width: 767.98px) {
+  .timeline-element:nth-child(even) {
+    margin-left: 0rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .timeline-element {
+    width: 100%;
+    text-align: left;
+    padding-left: 2.5rem;
+    padding-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  section {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    padding-top: 4em;
+    overflow: hidden;
+  }
+}
+@media (max-width: 767.98px) {
+  .timeline-element:nth-child(even)::before {
+    left: 1px;
+  }
+}
+@media (max-width: 767.98px) {
+  .timeline-element::before {
+    top: 1.25rem;
+  }
+}

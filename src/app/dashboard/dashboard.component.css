@@ -1,0 +1,19 @@
+.blue {
+  background-color: #2196f3;
+}
+.amber {
+  background-color: #ffc107;
+}
+.red {
+  background-color: #f44336;
+}
+.teal {
+  background-color: #009688;
+}
+.white {
+  background-color: #faf8f8;
+}
+.media:hover {
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}

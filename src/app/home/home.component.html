@@ -1,7 +1,7 @@
 <div class="ui inverted dimmer" [class.active]='loading'>
     <div class="ui text loader">Please wait</div>
 </div>
-<div class="jumbotron bg-white">
+<div class="bg-white">
     <h1 class="display-4">COVID-19 Beware App</h1>
     <hr>
     <dashboard
@@ -11,8 +11,7 @@
         [activeCases]='activeCases'>
     </dashboard>
 </div>
-<hr>
-<div class="ui form">
+<!-- <div class="ui form">
     <div class="inline fields">
         <label for="">Select case type: </label>
         <div class="field">
@@ -40,12 +39,15 @@
             </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col">
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
         <google-chart [data]="table" [type]='pie'></google-chart>
     </div>
-    <div class="col">
+    <div class="col-md-6">
         <google-chart [data]="table" [type]='column'></google-chart>
     </div>
+  </div>
 </div>
+

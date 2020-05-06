@@ -1,42 +1,74 @@
-<div class="row">
-    <div class="card col p-3 m-3">
-        <div class="ui statistic">
-            <div class="label">
-                <h3>Confirmed</h3>
+<div class="container">
+  <div class="my-5">
+    <!-- Section: Block Content -->
+    <section>
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="media white z-depth-1 rounded">
+            <i class="fa fa-check fa-lg blue z-depth-1 p-4 rounded-left text-white mr-3"></i>
+            <div class="media-body p-1">
+              <p class="text-uppercase text-muted mb-1"><small>Confirmed</small></p>
+              <h5 class="font-weight-bold mb-0"> {{ confirmedCases | number }}</h5>
             </div>
-            <div class="value">
-                {{ confirmedCases }}
-            </div>
+          </div>
+
         </div>
-    </div>
-    <div class="card col p-3 m-3">
-        <div class="ui statistic">
-            <div class="label">
-               <h3>Recovered</h3> 
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="media white z-depth-1 rounded">
+            <i class="fa fa-user-md fa-lg amber z-depth-1 p-4 rounded-left text-white mr-3"></i>
+            <div class="media-body p-1">
+              <p class="text-uppercase text-muted mb-1"><small>Recovered</small></p>
+              <h5 class="font-weight-bold mb-0">{{ recoveredCases | number }}</h5>
             </div>
-            <div class="value">
-                {{recoveredCases}}
-            </div>
+          </div>
+
+
         </div>
-    </div>
-    <div class="card col p-3 m-3">
-        <div class="ui statistic">
-            <div class="label">
-                <h3>Deaths</h3>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="media white z-depth-1 rounded">
+            <i class="fa fa-bed fa-lg red z-depth-1 p-4 rounded-left text-white mr-3"></i>
+            <div class="media-body p-1">
+              <p class="text-uppercase text-muted mb-1"><small>Deaths</small></p>
+              <h5 class="font-weight-bold mb-0">{{ deathsCases | number }}</h5>
             </div>
-            <div class="value">
-                {{ deathsCases }}
-            </div>
+          </div>
+
         </div>
-    </div>
-    <div class="card col p-3 m-3">
-        <div class="ui statistic">
-            <div class="label">
-                <h3>Active</h3>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="media white z-depth-1 rounded">
+            <i class="fa fa-download fa-lg teal z-depth-1 p-4 rounded-left text-white mr-3"></i>
+            <div class="media-body p-1">
+              <p class="text-uppercase text-muted mb-1"><small>Active</small></p>
+              <h5 class="font-weight-bold mb-0">{{ activeCases | number }}</h5>
             </div>
-            <div class="value">
-                {{ activeCases }}
-            </div>
+          </div>
+
         </div>
-    </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </section>
+    <!-- Section: Block Content -->
+
+
+  </div>
 </div>
