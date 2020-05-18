@@ -121,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "beware"
+    }
+  },
+  "defaultProject": "beware",
+  "cli": {
+    "analytics": false
+  }
 }
