@@ -18,4 +18,5 @@ npm install
 
 ## Authors
 
-* **Ntwari Moise** - *Initial work* - [yeex](https://github.com/yeex)
+* **Ntwari Moise** - *Back-end work* - [yeex](https://github.com/yeex)
+* **Ishimwe Kevin** - *Front-end work* - [kevingarry97](https://github.com/kevingarry97)
